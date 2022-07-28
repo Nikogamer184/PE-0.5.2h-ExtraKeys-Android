@@ -8,6 +8,7 @@ import Controls;
 
 class ClientPrefs {
 	public static var downScroll:Bool = false;
+	public static var shaders:Bool = false;
 	public static var middleScroll:Bool = false;
 	public static var showFPS:Bool = #if android false #else true #end;
 	public static var flashing:Bool = true;
@@ -175,6 +176,7 @@ class ClientPrefs {
 		//FlxG.save.data.cursing = cursing;
 		//FlxG.save.data.violence = violence;
 		FlxG.save.data.camZooms = camZooms;
+		FlxG.save.data.shaders = shaders;
 		FlxG.save.data.noteOffset = noteOffset;
 		FlxG.save.data.hideHud = hideHud;
 		FlxG.save.data.hsv11 = arrowHSV;
@@ -231,6 +233,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.lowQuality != null) {
 			lowQuality = FlxG.save.data.lowQuality;
+		}
+		if(FlxG.save.data.shaders != null) {
+	shaders = FlxG.save.data.shaders;
 		}
 		if(FlxG.save.data.framerate != null) {
 			framerate = FlxG.save.data.framerate;
